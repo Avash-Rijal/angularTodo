@@ -1,0 +1,20 @@
+<div class="container p-2 mt-5">
+  <div class="titleContainer">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="exampleCheck1"
+      (click)="onCheckBoxClick()"
+    />
+    <h5 [ngClass]="{ strike: !todoProps.active, second: true, third: false }">
+      {{ todoProps.title }}
+    </h5>
+  </div>
+
+  <p [ngClass]="{ strike: !todoProps.active, second: true, third: false }">
+    {{ todoProps.desc }}
+  </p>
+  <button type="button" class="btn btn-sm btn-danger" (click)="onClick()">
+    Delete
+  </button>
+</div>

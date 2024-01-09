@@ -1,0 +1,8 @@
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.strike {
+  text-decoration: line-through;
+}

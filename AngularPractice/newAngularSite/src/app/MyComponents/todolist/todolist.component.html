@@ -1,0 +1,13 @@
+<app-add-todo-item (todoAddItem)="addTodo($event)"></app-add-todo-item>
+<div *ngIf="this.todoItem.length === 0; else elseBlock">
+  <p class="container mt-5">No tasks to do.</p>
+</div>
+<ng-template #elseBlock>
+  <div *ngFor="let todoElement of todoItem">
+    <app-todo-single-item
+      [todoProps]="todoElement"
+      (todoDelete)="deleteTodo($event)"
+      (todoCheckBox)="toggleTodo($event)"
+    ></app-todo-single-item>
+  </div>
+</ng-template>
